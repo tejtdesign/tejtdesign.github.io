@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>tejtdesign</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&display=swap" rel="stylesheet">
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body id="homeSect">
+
+	<div id="menuLocat" data-scroll-header></div>
+
+  <div id="navbar">
+    <a href="#homeSect" id="logo">tejtdesign</a>
+    <span id="mobMenu">
+      <span class="container" onclick="mobMenu()">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </span>
+    </span>
+    <div id="navbar-right">
+      <h1 id="mobLogo">tejtdesign</h1>
+      <span class="home"><a href="#homeSect">Home</a></span>
+      <span class="about"><a href="#about">About</a></span>
+      <span class="portfolio"><a href="#portfolio">Portfolio</a></span>
+      <span class="quote"><a href="#quote" style="outline: 1px solid white; outline-offset: 0px;">Get A Quote</a></span>
+      <span><a><div style="width: 5px;"></div></a></span>
+    </div>
+  </div>
+
+  <div style="margin-top:130px !important;margin: 15px;padding:5px 15pxpx;font-size:30px">
+
+    <div class="section" id="home">
+    	 <div w3-include-html="home.html"></div> 
+    </div>
+
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@16.1.3/dist/smooth-scroll.js"></script>
+
+    <div class="section" id="about">
+    	 <div w3-include-html="about.html"></div> 
+    </div>
+
+    <div class="section" id="portfolio">
+    	 <div w3-include-html="portfolio.html"></div> 
+    </div>
+
+    <div class="section" id="quote" style="min-height: 650px;">
+    	 <div w3-include-html="quote.html"></div> 
+    </div>
+
+
+
+  </div>
+
+  <div style="width: 100%; height: 200px; background-color: #46cef0; text-align: center; padding-top: 60px;">
+  	
+  	Copyright &#169; <script>document.write( new Date().getFullYear() );</script> tejtdesign<br><br><br> <a id="privacyLink" href="/privacy">Privacy Policy</a>
+
+  </div>
+ <script>
+	includeHTML();
+	var scroll = new SmoothScroll('a[href*="#"]',{
+		header: '[data-scroll-header]'
+	});
+</script> 
+</body>
+
+</html>
