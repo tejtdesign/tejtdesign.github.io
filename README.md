@@ -15,6 +15,8 @@ Current Domains:
 - [ ] Home
   - [ ] Words
   - [ ] Pie Chart
+    - [x] Position Pie Chart
+    - [ ] Values in Pie Chart
 - [ ] About
   - [ ] Words
 - [ ] Portfolio
