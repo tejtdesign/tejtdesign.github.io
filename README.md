@@ -13,9 +13,12 @@ Current Domains:
     - [x] Style Mobile Menu
     - [x] Close Mobile on Menu Item Click
 - [ ] Home
+  - [ ] Words
   - [ ] Pie Chart
 - [ ] About
+  - [ ] Words
 - [ ] Portfolio
+  - [ ] Words
   - [ ] Slideshow
   - [ ] Pie Charts
 - [ ] Quote
