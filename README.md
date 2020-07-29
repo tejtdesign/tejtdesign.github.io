@@ -12,11 +12,11 @@ Current Domains:
     - [x] Hide Desktop Menu
     - [x] Style Mobile Menu
     - [x] Close Mobile on Menu Item Click
-- [ ] Home
-  - [ ] Words
-  - [ ] Pie Chart
+- [x] Home
+  - [x] Words
+  - [x] Pie Chart
     - [x] Position Pie Chart
-    - [ ] Values in Pie Chart
+    - [x] Values in Pie Chart
 - [ ] About
   - [ ] Words
 - [ ] Portfolio

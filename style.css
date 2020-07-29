@@ -19,6 +19,7 @@ body {
 h1 {
   font-family: 'Baloo 2', cursive;
   color: #46cef0;
+  font-size: 52px;
 }
 
 p {
@@ -48,7 +49,7 @@ p {
 }
 
 #navbar #logo {
-  font-size: 60px;
+  font-size: 70px;
   color: white;
   font-weight: bold;
   transition: 0.4s;
@@ -277,3 +278,25 @@ input[type=text], select {
 
 /* End Donought Pie */
 
+.animationContainer {
+  animation: fadeUp 2s forwards;
+  opacity: 0;
+  transform: translateY(0.3em);
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#homeQuote {
+  mix-blend-mode: difference;
+  width: 70%;
+  padding-left: 10vw;
+}
+
+@media screen and (max-width: 375px) {
+  #homePie {display: none !important;}
+}

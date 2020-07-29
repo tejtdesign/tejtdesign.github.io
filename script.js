@@ -9,7 +9,7 @@ function scrollFunction() {
 		document.getElementById("logo").style.fontSize = "50px";
 	} else {
 		document.getElementById("navbar").style.padding = "30px 10px";
-		document.getElementById("logo").style.fontSize = "60px";
+		document.getElementById("logo").style.fontSize = "70px";
 	}
 }
 
