@@ -7,7 +7,7 @@
   <meta charset="utf-8" name="description" content="We beat any quote from any Wiltshire web design agency. Web design in Marlborough, Wiltshire.">
   <meta name="og:title" property="og:title" content="Cheapest Web Design In Wiltshire">
   <meta name="twitter:card" content="Cheapest Web Design In Wiltshire">
-	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
   <link rel="stylesheet" type="text/css" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&display=swap" rel="stylesheet">
   <script src="https://smtpjs.com/v3/smtp.js"></script>
@@ -15,9 +15,7 @@
 </head>
 
 <body id="homeSect">
-
-	<div id="menuLocat" data-scroll-header></div>
-
+  <div id="menuLocat" data-scroll-header></div>
   <div id="navbar">
     <a href="#homeSect" id="logo">tejtdesign</a>
     <span id="mobMenu">
@@ -33,45 +31,126 @@
       <span class="about"><a href="#about" onclick="mobMenu()">About</a></span>
       <span class="portfolio"><a href="#portfolio" onclick="mobMenu()">Portfolio</a></span>
       <span class="quote"><a href="#quote" style="outline: 1px solid white; outline-offset: 0px;" onclick="mobMenu()">Get A Quote</a></span>
-      <span><a><div style="width: 5px;"></div></a></span>
+      <span><a>
+          <div style="width: 5px;"></div>
+        </a></span>
     </div>
   </div>
-
   <div style="margin-top:130px !important;margin: 15px;padding:5px 15pxpx;font-size:30px">
-
     <div class="section" id="home">
-    	 <div w3-include-html="home.html"></div> 
+      <div w3-include-html="home.html"></div>
     </div>
-
-		<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@16.1.3/dist/smooth-scroll.js"></script>
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@16.1.3/dist/smooth-scroll.js"></script>
     <div class="section" id="about">
-    	 <div w3-include-html="about.html"></div> 
+      <div w3-include-html="about.html"></div>
     </div>
-
     <div class="section" id="portfolio">
-    	 <div w3-include-html="portfolio.html"></div> 
+      <h1>Portfolio</h1>
+      <div class="slideshow-container">
+        <div class="slideshow-inner">
+          <div class="mySlides fade"> 1 </div>
+          <div class="mySlides fade"> 2 </div>
+          <div class="mySlides fade"> 3 </div>
+          <div class="mySlides fade"> 4 </div>
+        </div>
+        <a class="prev" onclick='plusSlides(-1)'>&#10094;</a>
+        <a class="next" onclick='plusSlides(1)'>&#10095;</a>
+      </div>
+      <br />
+      <div style='text-align: center; display: none'>
+        <span class="dot" onclick='currentSlide(1)'></span>
+        <span class="dot" onclick='currentSlide(2)'></span>
+        <span class="dot" onclick='currentSlide(3)'></span>
+        <span class="dot" onclick='currentSlide(4)'></span>
+      </div>
     </div>
-
-    <div class="section" id="quote" style="min-height: 650px;">
-    	 <div w3-include-html="quote.html"></div> 
-    </div>
-
-
-
   </div>
-
-  <div style="width: 100%; height: 200px; background-color: #46cef0; text-align: center; padding-top: 60px;">
-  	
-  	Copyright &#169; <script>document.write( new Date().getFullYear() );</script> tejtdesign<br><br><br> <a id="privacyLink" href="/privacy">Privacy Policy</a>
-
+  <div class="section" id="quote" style="min-height: 650px;">
+    <div w3-include-html="quote.html"></div>
   </div>
- <script>
-	includeHTML();
-	var scroll = new SmoothScroll('a[href*="#"]',{
-		header: '[data-scroll-header]'
-	});
-</script> 
+  </div>
+  <div style="width: 100%; height: 200px; background-color: #46cef0; text-align: center; padding-top: 60px;"> Copyright &#169; <script>
+    document.write(new Date().getFullYear());
+    </script> tejtdesign<br><br><br> <a id="privacyLink" href="/privacy">Privacy Policy</a>
+  </div>
+  <script>
+  includeHTML();
+  var scroll = new SmoothScroll('a[href*="#"]', {
+    header: '[data-scroll-header]'
+  });
+  // slideshow js
+  var slideIndex = 1;
+  var myTimer;
+  var slideshowContainer;
+  window.addEventListener("load", function() {
+    showSlides(slideIndex);
+    myTimer = setInterval(function() {
+      plusSlides(1)
+    }, 4000);
+    //COMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+    slideshowContainer = document.getElementsByClassName('slideshow-inner')[0];
+    //UNCOMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+    // slideshowContainer = document.getElementsByClassName('slideshow-container')[0];
+    slideshowContainer.addEventListener('mouseenter', pause)
+    slideshowContainer.addEventListener('mouseleave', resume)
+  })
+  // NEXT AND PREVIOUS CONTROL
+  function plusSlides(n) {
+    clearInterval(myTimer);
+    if(n < 0) {
+      showSlides(slideIndex -= 1);
+    } else {
+      showSlides(slideIndex += 1);
+    }
+    //COMMENT OUT THE LINES BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+    if(n === -1) {
+      myTimer = setInterval(function() {
+        plusSlides(n + 2)
+      }, 4000);
+    } else {
+      myTimer = setInterval(function() {
+        plusSlides(n + 1)
+      }, 4000);
+    }
+  }
+  //Controls the current slide and resets interval if needed
+  function currentSlide(n) {
+    clearInterval(myTimer);
+    myTimer = setInterval(function() {
+      plusSlides(n + 1)
+    }, 4000);
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if(n > slides.length) {
+      slideIndex = 1
+    }
+    if(n < 1) {
+      slideIndex = slides.length
+    }
+    for(i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for(i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+  }
+  pause = () => {
+    clearInterval(myTimer);
+  }
+  resume = () => {
+    clearInterval(myTimer);
+    myTimer = setInterval(function() {
+      plusSlides(slideIndex)
+    }, 4000);
+  }
+  </script>
 </body>
 
 </html>
