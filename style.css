@@ -314,7 +314,6 @@ input[type=text], select {
 .mySlides {
   display: none;
   height: calc(100vh - 200px);
-  border: solid 1px white;
 }
 
 .prev,
@@ -345,4 +344,27 @@ input[type=text], select {
 .prev:hover, .next:hover {
     color: black;
     background-color: white
+}
+
+
+
+#quote {
+  margin-left: 15px;
+}
+
+@media all and (orientation:portrait) {
+  /* Styles for Portrait screen */
+  #msdImg {
+    width: 100%;
+    height: auto;
+  }
+}
+@media all and (orientation:landscape) {
+  /* Styles for Landscape screen */
+  #msdImg {
+    width: auto;
+    height: 70%;
+    position: absolute;
+    top: 15%;
+  }
 }
