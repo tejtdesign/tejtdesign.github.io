@@ -2,6 +2,7 @@
 
 Current Domains:
 * http://theoturner.hopto.org/stuff/tejtdesign/tejtdesign
+* https://tejtdesign.github.io
 
 - [x] Menu
   - [x] Basic Menu
