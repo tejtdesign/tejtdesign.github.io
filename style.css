@@ -56,7 +56,7 @@ p {
   font-family: 'Baloo 2', cursive;
 }
 
-#navbar-right a:hover {
+#navbar-right a:hover:not(#navbar-spacer) {
   background-color: white;
   color: #46cef0;
   transition: 0.5s;
