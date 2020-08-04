@@ -56,29 +56,3 @@ function includeHTML() {
 }
 
 
-function form() {
-  var fname = document.forms["form"]["fname"].value;
-  var lname = document.forms["form"]["lname"].value;
-  var email = document.forms["form"]["email"].value;
-  var phone = document.forms["form"]["phone"].value;
-  var source = document.forms["form"]["source"].value;
-  var message = document.forms["form"]["message"].value.replace(/(?:\r\n|\r|\n)/g, '<br>');
-
-  body = 'fname:' + fname + ';lname:' + lname + ';email:' + email + ';phone:' + phone + ';source:' + source + ';message:<br><br>' + message;
-  console.log(body);
-
-  Email.send({
-    SecureToken: 'cc320b65-3af2-40ab-bb3c-1ad31b5d2dc3',
-    To: 'mail.tejtdesign@gmail.com',
-    From: email,
-    Subject: '[webform]',
-    Body: body
-  }).then(
-    message => console.log(message)
-  );
-
-  const form = document.getElementById('form');
-  form.reset();
-  alert("Thank you.")
-  return false;
-}

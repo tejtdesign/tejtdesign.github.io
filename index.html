@@ -82,10 +82,42 @@
   /* SmtpJS.com - v3.0.0 */
   var Email = { send: function (a) { return new Promise(function (n, e) { a.nocache = Math.floor(1e6 * Math.random() + 1), a.Action = "Send"; var t = JSON.stringify(a); Email.ajaxPost("https://smtpjs.com/v3/smtpjs.aspx?", t, function (e) { n(e) }) }) }, ajaxPost: function (e, n, t) { var a = Email.createCORSRequest("POST", e); a.setRequestHeader("Content-type", "application/x-www-form-urlencoded"), a.onload = function () { var e = a.responseText; null != t && t(e) }, a.send(n) }, ajax: function (e, n) { var t = Email.createCORSRequest("GET", e); t.onload = function () { var e = t.responseText; null != n && n(e) }, t.send() }, createCORSRequest: function (e, n) { var t = new XMLHttpRequest; return "withCredentials" in t ? t.open(e, n, !0) : "undefined" != typeof XDomainRequest ? (t = new XDomainRequest).open(e, n) : t = null, t } };
 
+  function form() {
+    var fname = document.forms["form"]["fname"].value;
+    var lname = document.forms["form"]["lname"].value;
+    var email = document.forms["form"]["email"].value;
+    var phone = document.forms["form"]["phone"].value;
+    var source = document.forms["form"]["source"].value;
+    var message = document.forms["form"]["message"].value.replace(/(?:\r\n|\r|\n)/g, '<br>');
+
+    body = 'fname:' + fname + ';lname:' + lname + ';email:' + email + ';phone:' + phone + ';source:' + source + ';message:<br><br>' + message;
+    console.log(body);
+
+    Email.send({
+      SecureToken: 'cc320b65-3af2-40ab-bb3c-1ad31b5d2dc3',
+      To: 'mail.tejtdesign@gmail.com',
+      From: email,
+      Subject: '[webform]',
+      Body: body
+    }).then(
+      message => console.log(message)
+    );
+
+    const form = document.getElementById('form');
+    form.reset();
+    alert("Thank you.")
+    return false;
+  }
+
+
   includeHTML();
+
+
   var scroll = new SmoothScroll('a[href*="#"]', {
     header: '[data-scroll-header]'
   });
+
+
   // slideshow js
   var slideIndex = 1;
   var myTimer;
