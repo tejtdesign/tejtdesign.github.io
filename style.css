@@ -62,11 +62,6 @@ p {
   transition: 0.5s;
 }
 
-.active {
-  background-color: white;
-  color: #46cef0 !important;
-}
-
 #navbar-right {
   float: right;
 }
