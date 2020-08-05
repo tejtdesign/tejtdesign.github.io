@@ -349,14 +349,14 @@ input[type=text], select {
 
 @media all and (orientation:portrait) {
   /* Styles for Portrait screen */
-  #msdImg {
+  .msdImg {
     width: 100%;
     height: auto;
   }
 }
 @media all and (orientation:landscape) {
   /* Styles for Landscape screen */
-  #msdImg {
+  .msdImg {
     width: auto;
     height: 70%;
     position: absolute;
