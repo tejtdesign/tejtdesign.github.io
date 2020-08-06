@@ -377,8 +377,10 @@ a {
     width: 300px;
     float:left; /* add this */
     border: 1px solid red;
+    height: 10px;
 }
 #second {
     border: 1px solid green;
     overflow: hidden; /* if you don't want #second to wrap below #first */
+    height: 10px;
 }
