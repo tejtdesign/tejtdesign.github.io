@@ -358,7 +358,7 @@ input[type=text], select {
   /* Styles for Landscape screen */
   .msdImg {
     width: auto;
-    height: 70%;
+    height: 40%;
   }
 }
 
