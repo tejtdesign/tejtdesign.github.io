@@ -347,19 +347,10 @@ input[type=text], select {
   margin-left: 15px;
 }
 
-@media all and (orientation:portrait) {
-  /* Styles for Portrait screen */
-  .msdImg {
-    width: 100%;
-    height: auto;
-  }
-}
-@media all and (orientation:landscape) {
-  /* Styles for Landscape screen */
-  .msdImg {
-    width: auto;
-    height: 40%;
-  }
+.msdImg {width: 30%}
+
+@media screen and (max-width: 500px) {
+  .msdImg {width: 100%}
 }
 
 a {
