@@ -347,10 +347,10 @@ input[type=text], select {
   margin-left: 15px;
 }
 
-.msdImg {width: 30vw;}
+.msdImg {width: 50vw;}
 
 @media screen and (max-width: 500px) {
-  .msdImg {width: 100% !important;}
+  .msdImg {width: 100vw !important;}
 }
 
 a {
