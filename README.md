@@ -18,8 +18,8 @@ Current Domains:
   - [x] Pie Chart
     - [x] Position Pie Chart
     - [x] Values in Pie Chart
-- [ ] About
-  - [ ] Words
+- [x] About
+  - [x] Words
 - [ ] Portfolio
   - [x] Slideshow
   - [ ] Words
