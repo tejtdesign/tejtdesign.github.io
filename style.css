@@ -374,7 +374,7 @@ a {
     overflow: hidden; /* will contain if #first is longer than #second */
 }
 #first {
-    width: 300px;
+    width: 50%;
     float:left; /* add this */
     border: 1px solid red;
     height: 10px;
