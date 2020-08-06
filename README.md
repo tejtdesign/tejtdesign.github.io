@@ -21,7 +21,6 @@ Current Domains:
 - [x] About
   - [x] Words
 - [ ] Portfolio
-  - [x] Slideshow
   - [ ] Words
 - [ ] Quote
   - [x] Form
