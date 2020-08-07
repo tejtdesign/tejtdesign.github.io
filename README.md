@@ -27,3 +27,6 @@ Current Domains:
   - [x] Form Styling
   - [ ] reCaptcha
     - [ ] Get Actual Domain
+- [ ] Privacy Policy
+  - [ ] Words
+  - [x] Link
