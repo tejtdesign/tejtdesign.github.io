@@ -20,8 +20,8 @@ Current Domains:
     - [x] Values in Pie Chart
 - [x] About
   - [x] Words
-- [ ] Portfolio
-  - [ ] Words
+- [x] Portfolio
+  - [x] Words
 - [ ] Quote
   - [x] Form
   - [x] Form Styling
