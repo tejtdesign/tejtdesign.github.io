@@ -375,3 +375,7 @@ a {
     overflow: hidden; /* if you don't want #second to wrap below #first */
     height: 10px;
 }
+
+#portfolio {
+  min-height: 480px;
+}
