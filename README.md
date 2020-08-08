@@ -30,3 +30,4 @@ Current Domains:
 - [ ] Privacy Policy
   - [ ] Words
   - [x] Link
+    - [ ] Get Actual Domain
