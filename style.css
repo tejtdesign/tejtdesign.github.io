@@ -359,6 +359,11 @@ a {
   color: white;
 }
 
+a:hover {
+  color: #46cef0;
+  transition: 0.3s;
+}
+
 #wrapper {
     width: 100%;
     border: 1px solid black;
