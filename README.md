@@ -1,8 +1,8 @@
 # tejtdesign
 
 Current Domains:
-* http://theoturner.hopto.org/stuff/tejtdesign/tejtdesign
 * https://tejtdesign.github.io
+* https://tejtdesign.co.uk
 
 - [x] Menu
   - [x] Basic Menu
@@ -22,10 +22,9 @@ Current Domains:
   - [x] Words
 - [x] Portfolio
   - [x] Words
-- [ ] Quote
+- [x] Quote
   - [x] Form
   - [x] Form Styling
-  - [ ] reCaptcha
     - [x] Get Actual Domain
 - [x] Privacy Policy
   - [x] Words
