@@ -27,8 +27,8 @@ Current Domains:
   - [x] Form Styling
   - [ ] reCaptcha
     - [x] Get Actual Domain
-- [ ] Privacy Policy
-  - [ ] Words
+- [x] Privacy Policy
+  - [x] Words
     - [x] Get Actual Domain
-  - [ ] Formatting
+  - [x] Formatting
   - [x] Link
