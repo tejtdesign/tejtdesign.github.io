@@ -343,8 +343,9 @@ input[type=text], select {
 
 
 
-#quote {
+#quote-old {
   margin-left: 15px;
+  display: none;
 }
 
 .msdImg {width: 50vw;}
