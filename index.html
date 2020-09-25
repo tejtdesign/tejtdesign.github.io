@@ -39,17 +39,109 @@
   </div>
   <div style="margin-top:130px !important;margin: 15px;padding:5px 15pxpx;font-size:30px">
     <div class="section" id="home">
-      <div w3-include-html="home.html"></div>
+<h1>Define your business.</h1>
+
+<section id="homePie" style="float: right; padding-right: 50px; padding-left: 50px;">
+    <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="300px" xmlns="http://www.w3.org/2000/svg">
+      <circle class="circle-chart__background" stroke="white" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+      <circle class="circle-chart__circle" stroke="#46cef0" stroke-width="2" stroke-dasharray="68,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+      <g class="circle-chart__info">
+        <text class="circle-chart__percent" x="16.91549431" y="15.5" alignment-baseline="central" text-anchor="middle" font-size="8" fill="#46cef0" style="font-family: 'Baloo 2', cursive;">68%</text>
+        <text class="circle-chart__subline" x="16.91549431" y="20.5" alignment-baseline="central" text-anchor="middle" font-size="2" fill="white">68% of all business.</text>
+      </g>
+    </svg>
+</section>
+
+
+<p class="animationContainer" style="width: 30vw; top: 120px">
+  <img style="height: 15vw; width: auto; position: absolute;" alt="" src="quote.svg">
+  <br><br><br>
+  <h2 id="homeQuote">68% of all my business now comes from the website.<br>- Steven Turner, Marlborough Structural Design</h2>
+</p>
     </div>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@16.1.3/dist/smooth-scroll.js"></script>
     <div class="section" id="about">
-      <div w3-include-html="about.html"></div>
+<h1>About</h1>
+
+<p>
+
+Theo has been designing websites for several years, with experience in WordPress, HTML, CSS and Javascript. The latter three allow him to deliver a faster and more flexible website, unlike other design agencies who only use WordPress.
+<br><br>
+Speed is incredibly important to Google and other search engines. It's also important to users; 40% abandon websites that take more than 3 seconds to load (KissMetrics). Our latest website, Marlborough Structural Design, has a load time of 0.7 seconds (<a href="https://gtmetrix.com/reports/marlboroughstructuraldesign.co.uk/Q15f5S9B" target="_blank" rel="noopener">see audit</a>). That's over seven times faster than the average 2020 page speed, allowing them to achieve near top rankings.
+<br><br>
+Our websites also compete well in Google's Lighthouse test, with the same site, we achieve an outstanding score of 99% (<a href="https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Fmarlboroughstructuraldesign.co.uk%2F&tab=desktop" target="_blank" rel="noopener">see audit</a>). If you google  'Structural Engineer Marlborough' (<a href="https://www.google.com/search?q=Structural+Engineer+Marlborough" target="_blank" rel="noopener">go to search</a>), the first result is a big yellow-page type company, closely followed by our client's website.
+</p>
     </div>
     <div class="section" id="portfolio">
-      <div w3-include-html="portfolio.html"></div>
+<h1>Portfolio</h1>
+
+<p>
+  <picture id="msdPic">
+    <source class="msdImg" srcset="msd.webp" type="image/webp">
+    <source class="msdImg" srcset="msd.png" type="image/png"> 
+    <img class="msdImg" src="msd.png" alt="">
+  </picture>
+  <p>
+<a target="_blank" rel="noopener" href="https://marlboroughstructuraldesign.co.uk">Marlborough Structural Design</a>, our latest customer, wanted a website to demonstrate their brand. Traditional, but contemporary. Their online presence utilises a universal colour scheme to achieves this, complete with matching logo and business cards.
+<br><br>
+Due to this, their website now generates 68% of their total business, allowing them to no longer rely on word of mouth. 
+<br><br>
+As a web design agency, we take pride in our customers' success, motivating us to create the best website possible.
+  </p>
+</div>
+</p>
     </div>
     <div class="section" id="quote">
-      <div w3-include-html="quote.html"></div>
+<h1>Get In Touch</h1>
+
+<form id="form" onsubmit="return form()">
+    <div class="formNames">
+        <label style="display: block;" for="fname">First Name *</label>
+        <input style="font-size: 14px;" type="text" id="fname" name="fname" placeholder="John" required>
+    </div>
+
+    <div class="formNames">
+        <label style="display: block;" for="lname">Last Name *</label>
+        <input style="font-size: 14px;" type="text" id="lname" name="lname" placeholder="Smith" required>
+    </div>
+
+
+    <div class="form">
+        <label style="display: block;" for="email">Email *</label>
+        <input style="font-size: 14px;" type="text" id="email" name="email" placeholder="john.smith@email.com" required>
+    </div>
+
+    <br>
+    <div class="form">
+        <label style="display: block;" for="phone">Phone number</label>
+        <input style="font-size: 14px;" type="text" id="phone" name="phone" placeholder="07700 900461">
+    </div>
+
+
+    <div class="form">
+        <label style="display: block;" for="source">Where did you learn about us?</label>
+        <select style="height: 32px; font-size: 14px;" id="source" name="source">
+            <option value="" disabled selected>Please Select (it helps us :)</option>
+            <option value="google">Google</option>
+            <option value="twitter">Referral</option>
+            <option value="search">Other Search Engine</option>
+            <option value="yell">Yell</option>
+            <option value="facebook">Facebook</option>
+            <option value="twitter">Twitter</option>
+        </select>
+    </div>
+
+    
+    <div class="form">
+        <label id="messageLabel" style="display: block; width: 100%" for="message">Message (what would you like: online shop, portfolio, blog, etc.) *</label>
+        <textarea id="message" name="message" style="width: 90.5vw; height: 200px; border-radius: 5px; font-size: 18px; padding-bottom: 0px;" required></textarea>
+        <p style="font-size: 12px; padding-top: 0px;;" id="quoteInfo">Please expect a reply within 1-2 working days.</p>
+    </div>
+
+    <br>
+    <button style="width: 125px; font-size: 16px;" id="submit" action="submit" value="Submit">Submit</button>
+</form>
+
     </div>
   </div>
   <div style="width: 100%; height: 200px; background-color: #46cef0; text-align: center; padding-top: 60px;"> Copyright &#169; <script>document.write(new Date().getFullYear());</script> tejtdesign
@@ -99,10 +191,6 @@
     alert("Thank you.")
     return false;
   }
-
-
-  includeHTML();
-
 
   var scroll = new SmoothScroll('a[href*="#"]', {
     header: '[data-scroll-header]'
